@@ -55,7 +55,7 @@
         }
 
         #btnYes {
-        position: absolute;
+        /* position: absolute; */
         background-color: #7bd806;
         cursor: pointer;
         }
@@ -95,6 +95,7 @@
             cursorX = e.pageX;
             cursorY = e.pageY;
 
+            document.getElementById("btnYes").style.position ="absolute";
             document.getElementById("btnYes").style.left = (cursorX + 80) + "px";
             document.getElementById("btnYes").style.top = (cursorY - 290) + "px";
 
@@ -110,14 +111,14 @@
         }
     </script>  
           
-        <div id="div1" style="background-image: url('./file/hinh_nen.jpg');background-repeat: no-repeat;background-size: cover;">
+        <div id="div1" style="background-image: url('./file/love_xanh.jpg');background-repeat: no-repeat;background-size: cover;">
             <div style="text-align: center;">
                 <div style="position: relative; top: 250px;font-style: italic;font-family: cursive;">
                     <h1 class="txt--gradient-orange " style="font-size: 80px; ">Anh yêu em</h1>
                     <img style="width: 80px; height: 80px; margin-top: 10px;" src="./file/love_me.gif" alt="love">
                     <div>
                         <h1 id="text_love" style="display: inline-block; font-size: 60px; margin-bottom: 10px;">Làm người yêu anh nhé?</h1>                   
-                        <img id="icon_yeu" style="display: none; width: 60px; height: 60px; margin-left: 15px;" src="./file/icon_yeu.png" alt="love">
+                        <img id="icon_yeu" style=" width: 60px; height: 60px; margin-left: 15px;" src="./file/icon_yeu.png" alt="love">
                     </div>
                     
                     <div style="font-style: italic;font-family: cursive;">
@@ -128,14 +129,14 @@
             </div>
         </div>
 
-        <div id="div2" style="display: none;background-image: url('./file/thank_you.gif');background-repeat: no-repeat;background-size: cover;">  
+        <div id="div2" style="display: none;background-image: url('./file/love_ok_sau.jpg');background-repeat: no-repeat;background-size: cover;">  
             <div style="text-align: center;font-style: italic;font-family: cursive;">
-                <h1>Mẹ cha cho bạc cho vàng</h1>
-                <h1>Cũng không sánh bằng yêu nàng giáo viên</h1>
+                <!-- <h1>Mẹ cha cho bạc cho vàng</h1>
+                <h1>Cũng không sánh bằng yêu nàng giáo viên</h1> -->
                 <img style="width: 80px; height: 80px; margin-top: 10px;" src="./file/love_me.gif" alt="love">
                 <h1 class="txt--gradient-pink" style="font-size: 60px; ">Anh Yêu Em</h1>
-                <video style="margin-top: 10px;border-radius: 10px;" id="myVideo" controls loop>
-                    <source src="./file/video_love.mp4">
+                <video style="margin-top: 10px;border-radius: 10px; height: 700px;"  id="myVideo" controls loop>
+                    <source src="./file/video_love_sau.mp4">
                 </video>
             </div>                    
         </div>   

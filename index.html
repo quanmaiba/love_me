@@ -55,12 +55,13 @@
         }
 
         #btnYes {
+        position: absolute;
         background-color: #7bd806;
         cursor: pointer;
         }
 
         #btnNo {
-            position: absolute;
+        position: absolute;
         background-color: #f4511e;
         transition: 0.3s;
         }
@@ -85,8 +86,20 @@
         var y = Math.floor(Math.random() * (window.innerHeight / 1.5));
         document.getElementById("btnNo").style.left = x + "px";
         document.getElementById("btnNo").style.top = y + "px";
-        document.getElementById("text_love").innerHTML = "À nhầm!!! Làm vợ anh nhé, babe?";
-        document.getElementById("icon_yeu").style.display="inline-block";
+        // document.getElementById("text_love").innerHTML = "À nhầm!!! Làm vợ anh nhé, babe?";
+        // document.getElementById("icon_yeu").style.display="inline-block";
+
+        var cursorX;
+        var cursorY;
+            document.onmousemove = function(e){
+            cursorX = e.pageX;
+            cursorY = e.pageY;
+
+            document.getElementById("btnYes").style.left = (cursorX + 80) + "px";
+            document.getElementById("btnYes").style.top = (cursorY - 290) + "px";
+
+            }
+
         }
 
 
@@ -103,7 +116,7 @@
                     <h1 class="txt--gradient-orange " style="font-size: 80px; ">Anh yêu em</h1>
                     <img style="width: 80px; height: 80px; margin-top: 10px;" src="./file/love_me.gif" alt="love">
                     <div>
-                        <h1 id="text_love" style="display: inline-block; font-size: 60px; margin-bottom: 10px;">Làm vợ bé anh nhé?</h1>                   
+                        <h1 id="text_love" style="display: inline-block; font-size: 60px; margin-bottom: 10px;">Làm người yêu anh nhé?</h1>                   
                         <img id="icon_yeu" style="display: none; width: 60px; height: 60px; margin-left: 15px;" src="./file/icon_yeu.png" alt="love">
                     </div>
                     
